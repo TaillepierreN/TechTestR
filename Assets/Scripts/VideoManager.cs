@@ -10,13 +10,9 @@ public class VideoManager : MonoBehaviour
     void Start()
     {
         vPlayer = GameObject.Find("Videoplayer").GetComponent<VideoPlayer>();
+        vPlayer.loopPointReached += EndReached;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void PauseUnpause()
     {
         if(!vPlayer.isPlaying)
@@ -30,5 +26,9 @@ public class VideoManager : MonoBehaviour
             pausePanel.SetActive(true);
 
         }
+    }
+    void EndReached(UnityEngine.Video.VideoPlayer vp)
+    {
+        GameObject.Find("SceneManager").GetComponent<SceneManager>().NextScene();
     }
 }
