@@ -6,6 +6,7 @@ using UnityEngine.Video;
 public class VideoManager : MonoBehaviour
 {
     VideoPlayer vPlayer;
+    [SerializeField]GameObject pausePanel;
     void Start()
     {
         vPlayer = GameObject.Find("Videoplayer").GetComponent<VideoPlayer>();
@@ -21,10 +22,13 @@ public class VideoManager : MonoBehaviour
         if(!vPlayer.isPlaying)
         {
             vPlayer.Play();
+            pausePanel.SetActive(false);
         }
         else
         {
             vPlayer.Pause();
+            pausePanel.SetActive(true);
+
         }
     }
 }
