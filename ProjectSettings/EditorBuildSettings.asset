@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/VideoScene.unity
     guid: c029ea6aede0d764aacfdcf093e36e47
+  - enabled: 1
+    path: Assets/Scenes/QCMScene.unity
+    guid: a585452585e9e2f4a97be16e11e4a5a9
   m_configObjects: {}
