@@ -17,20 +17,10 @@ public class QuestionManager : MonoBehaviour
     string firstAnswer;
     string secondAnswer;
     string commentary;
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void SendSurvey()
     {
 
-        if(FirstAnswerToQuestion1.isOn)
+        if (FirstAnswerToQuestion1.isOn)
         {
             firstAnswer = "Oui";
         }
@@ -38,7 +28,7 @@ public class QuestionManager : MonoBehaviour
         {
             firstAnswer = "Non";
         }
-                if(FirstAnswerToQuestion2.isOn)
+        if (FirstAnswerToQuestion2.isOn)
         {
             secondAnswer = "Oui";
         }
